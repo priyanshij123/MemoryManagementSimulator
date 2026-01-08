@@ -22,6 +22,7 @@ A C++ simulation of memory allocation strategies (First Fit, Best Fit, Worst Fit
 
 ### Prerequisites
 - A C++ Compiler (GCC/G++ recommended)
+- The make build automation tool
 ### Command Guide
 
 | Command | Description |
