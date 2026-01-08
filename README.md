@@ -2,7 +2,7 @@
 
 A C++ simulation of memory allocation strategies (First Fit, Best Fit, Worst Fit) and a multi-level cache system (L1/L2) with FIFO replacement policy.
 
-## 📋 Features
+## Features
 
 ### Memory Management
 - **Allocation Strategies:** Supports First Fit, Best Fit, and Worst Fit.
@@ -18,7 +18,7 @@ A C++ simulation of memory allocation strategies (First Fit, Best Fit, Worst Fit
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - A C++ Compiler (GCC/G++ recommended)
@@ -38,7 +38,7 @@ A C++ simulation of memory allocation strategies (First Fit, Best Fit, Worst Fit
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Run with Test Inputs 
 To execute the simulator using the pre-defined test workload inside the tests folder paste the given command in project directory:
