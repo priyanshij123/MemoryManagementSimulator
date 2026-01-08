@@ -49,6 +49,8 @@ Output:
 [0x017c - 0x0185] USED (id=4)
 [0x0186 - 0x03ff] FREE
 
+[The first block from start which is large enough to allocate 70 bytes is assigned]
+
 Test 3: Free and Coalescing
 ---------------------------
 Command:
@@ -60,6 +62,8 @@ Output:
 [0x0046 - 0x017b] FREE
 [0x017c - 0x0185] USED (id=4)
 [0x0186 - 0x03ff] FREE
+
+[When ID 2 was freed it merges with adjacent free blocks]
 
 Test 4: Best Fit Allocation
 ---------------------------
@@ -82,6 +86,8 @@ Output:
 [0x017c - 0x0185] USED (id=4)
 [0x0186 - 0x03ff] FREE
 
+[The smallest free block which can accomodate 70 bytes is assigned with ID 5]
+
 Test 5: Worst Fit Allocation
 ----------------------------
 Command:
@@ -101,6 +107,8 @@ Output:
 [0x017c - 0x0185] USED (id=4)
 [0x0186 - 0x01cb] USED (id=6)
 [0x01cc - 0x03ff] FREE
+
+[The largest free block gets assigned]
 
 Test 6: Memory Statistics
 -------------------------
@@ -132,20 +140,33 @@ Output:
 > access 0
 L1 MISS
 L2 MISS -> Main Memory
+
+[When address is accessed for the first time it results into miss
+Then the corresponding 16 addresses gets stored in both caches in particular set which they are mapped into]
+
 > access 16
 L1 MISS
 L2 MISS -> Main Memory
+
 > access 32
 L1 MISS
 L2 MISS -> Main Memory
+
 > access 48
 L1 MISS
 L2 MISS -> Main Memory
+
 > access 0
 L1 HIT
+
+[accessing for second time results in L1 HIT, it does not move further to L2]
+
 > access 64
 L1 MISS
 L2 MISS -> Main Memory
+
+[since L1 gets full FIFO replacement happens , address 0 gets removed from L1]
+
 > access 0
 L1 MISS
 L2 HIT
