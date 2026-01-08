@@ -1,0 +1,38 @@
+64 16 2
+256 16 4
+init memory 1024
+malloc 100
+malloc 200
+malloc 80
+malloc 10
+free 1
+free 3
+dump memory
+set allocator first_fit
+malloc 70
+dump memory
+free 2
+dump memory
+init memory 1024
+malloc 100
+malloc 200
+malloc 80
+malloc 10
+free 1
+free 3
+set allocator best_fit
+malloc 70
+dump memory
+free 5
+set allocator worst_fit
+malloc 70
+dump memory
+stats
+access 0
+access 16
+access 32
+access 48
+access 0
+access 64
+access 0
+exit
