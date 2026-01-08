@@ -1,4 +1,4 @@
-# Memory Management & Cache Simulator
+# Memory Management & Cache Simulator (Demo video link included)
 
 A C++ simulation of memory allocation strategies (First Fit, Best Fit, Worst Fit) and a multi-level cache system (L1/L2) with FIFO replacement policy.
 
@@ -62,3 +62,5 @@ To run the simulator in interactive mode
 ```powershell
 make run
 ```
+## Demo video link
+https://drive.google.com/file/d/1T_ap1730a3ZWsjfYXo377vUrpqSWtpqr/view?usp=drive_link
