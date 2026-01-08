@@ -43,7 +43,7 @@ A C++ simulation of memory allocation strategies (First Fit, Best Fit, Worst Fit
 ### Run with Test Inputs 
 To execute the simulator using the pre-defined test workload inside the tests folder paste the given command in project directory:
 
-- To comiple:
+- To compile:
 ```powershell
 g++ src/main.cpp -o main
 ```
