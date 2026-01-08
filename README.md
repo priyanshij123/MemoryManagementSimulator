@@ -40,12 +40,19 @@ A C++ simulation of memory allocation strategies (First Fit, Best Fit, Worst Fit
 ## 🚀 How to Run
 
 ### Run with Test Inputs 
-To execute the simulator using the pre-defined test workload inside the `tests` folder paste the given command in project directory:
-- (Windows PowerShell)
+To execute the simulator using the pre-defined test workload inside the tests folder paste the given command in project directory:
+
+- To comiple:
+```powershell
+g++ src/main.cpp -o main
+```
+- To run:
+  
+(Windows PowerShell)
 ```powershell
 Get-Content tests\test_inputs.txt | .\main.exe
 ```
-- (Linux / macOS)
+(Linux / macOS)
 ```powershell
 ./main < tests/test_inputs.txt
 ```
